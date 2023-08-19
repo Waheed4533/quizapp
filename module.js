@@ -15,15 +15,16 @@ export async function startQuiz() {
         ]);
         userAnswers.push(answers.answer);
     }
-    let Earnedpoints = 0;
-    for (let i = 0; i < quizQuestions.length; i++) {
-        if (userAnswers[i] === quizQuestions[i].correctAnswer) {
-            Earnedpoints++;
-            console.log(chalk.bgBlue('Great,your answer is correct'));
-        }
-        else {
-            console.log(chalk.bgRed(`Sorry,your answer is wrong. Correct answer is ${quizQuestions[i].correctAnswer}`));
-        }
-        console.log(chalk.bold(`\nYour Score: ${Earnedpoints} / ${quizQuestions.length}`));
-    }
 }
+//   let Earnedpoints = 0;
+//   for (let i = 0; i < quizQuestions.length; i++) {
+//     if (userAnswers[i] === quizQuestions[i].correctAnswer) {
+//       Earnedpoints++;
+//       console.log(chalk.bgBlue('Great,your answer is correct'));
+//     }
+// else{
+// console.log(chalk.bgRed(`Sorry,your answer is wrong. Correct answer is ${quizQuestions[i].correctAnswer}`));
+//   }
+//   console.log(chalk.bold(`\nYour Score: ${Earnedpoints} / ${quizQuestions.length}`));
+// }
+// }

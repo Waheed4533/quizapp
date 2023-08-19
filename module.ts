@@ -17,7 +17,6 @@ export async function startQuiz() {
         choices: question.choices,
       }
     ]);
-
     userAnswers.push(answers.answer);
   }
 
@@ -37,4 +36,3 @@ console.log(chalk.bgRed(`Sorry,your answer is wrong. Correct answer is ${quizQue
   console.log(chalk.bold(`\nYour Score: ${Earnedpoints} / ${quizQuestions.length}`));
 }
 }
-
