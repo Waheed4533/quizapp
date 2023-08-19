@@ -9,7 +9,7 @@ export async function startQuiz() {
   const userAnswers: string[] = [];
   
   for (const question of quizQuestions) {
-    const answer = await inquirer.prompt([
+    const answers = await inquirer.prompt([
       {
         type: 'list',
         name: 'answer',
@@ -18,7 +18,7 @@ export async function startQuiz() {
       }
     ]);
 
-    userAnswers.push(answer.answer);
+    userAnswers.push(answers.answer);
   }
 
   let Earnedpoints = 0;

@@ -5,7 +5,7 @@ export async function startQuiz() {
     console.log(chalk.bold('Welcome to the Quiz App!\n'));
     const userAnswers = [];
     for (const question of quizQuestions) {
-        const answer = await inquirer.prompt([
+        const answers = await inquirer.prompt([
             {
                 type: 'list',
                 name: 'answer',
@@ -13,7 +13,7 @@ export async function startQuiz() {
                 choices: question.choices,
             }
         ]);
-        userAnswers.push(answer.answer);
+        userAnswers.push(answers.answer);
     }
     let Earnedpoints = 0;
     for (let i = 0; i < quizQuestions.length; i++) {
